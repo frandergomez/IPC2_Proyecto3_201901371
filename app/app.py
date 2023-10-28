@@ -20,3 +20,16 @@ def grabar_mensaje():
     return jsonify({
         "message": "El mensaje fue grabado con éxito"
     })
+
+@app.route('/grabarConfiguracion', methods=['POST'])
+def grabar_configuracion():
+    if 'file' not in request.files:
+        return jsonify({
+            "message": "No se ha enviado un archivo, intente de nuevo"
+        })
+    file = request.files['file']
+    file_contents = file.read().decode('utf-8')
+    messages_data.append({"config": file_contents})
+    return jsonify({
+        "message": "La configuración del servidor fue grabada con éxito"
+    })
