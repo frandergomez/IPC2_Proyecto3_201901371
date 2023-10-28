@@ -33,3 +33,21 @@ def grabar_configuracion():
     return jsonify({
         "message": "La configuración del servidor fue grabada con éxito"
     })
+
+@app.route('/limpiarDatos', methods=['POST'])
+def limpiar_datos():
+    messages_data.clear()
+    return jsonify({"message": "Datos limpiados exitosamente"})
+
+@app.route('/devolverHashtags', methods=['GET'])
+def devolver_hashtags():
+    hashtags = [msg.get("hashtag") for msg in messages_data if "hashtag" in msg]
+    return jsonify({"hashtags": hashtags})
+
+@app.route('/devolverMenciones', methods=['GET'])
+def devolver_menciones():
+    menciones = [msg.get("mencion") for msg in messages_data if "mencion" in msg]
+    return jsonify({"menciones": menciones})
+
+if __name__ == '__main__':
+    app.run(debug=True)
