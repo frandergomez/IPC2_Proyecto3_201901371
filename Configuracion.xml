@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diccionario>
+    <sentimientos_positivos>
+        <palabra>buena</palabra>
+        <palabra>excelente</palabra>
+        <palabra>positiva</palabra>
+        <palabra>genial</palabra>
+        <palabra>alegre</palabra>
+    </sentimientos_positivos>
+    <sentimientos_negativos>
+        <palabra>mala</palabra>
+        <palabra>pésima</palabra>
+        <palabra>triste</palabra>
+        <palabra>molesta</palabra>
+        <palabra>decepcionante</palabra>
+        <palabra>enojo</palabra>
+        <palabra>horrible</palabra>
+        <palabra>nefasto</palabra>
+        <palabra>insoportable</palabra>
+        <palabra>pésima</palabra>
+        <palabra>desagradable</palabra>
+        <palabra>desastroso</palabra>
+        <palabra>lamentable</palabra>
+        <palabra>aburrido</palabra>
+        <palabra>trágico</palabra>
+        <palabra>pésima</palabra>
+        <palabra>repugnante</palabra>
+        <palabra>irritante</palabra>
+        <palabra>incompetente</palabra>
+        <palabra>despreciable</palabra>
+        <palabra>grosero</palabra>
+        <palabra>desagüe</palabra>
+    </sentimientos_negativos>
+    <sentimientos_rechazados>
+        <palabra>no-palabra</palabra>
+    </sentimientos_rechazados>
+</diccionario>
