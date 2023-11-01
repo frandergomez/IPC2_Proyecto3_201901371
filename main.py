@@ -106,12 +106,6 @@ def limpiar_datos():
     messages_data.clear()
     return jsonify({"message": "Datos limpiados exitosamente"})
 
-@app.route('/devolverHashtags', methods=['GET'])
-def devolver_hashtags():
-    hashtags = [msg.get("hashtag") for msg in messages_data if "hashtag" in msg]
-    return jsonify({"hashtags": hashtags})
-
-
 @app.route('/devolverMenciones', methods=['GET'])
 def devolver_menciones():
     # Cargar el diccionario desde un archivo
@@ -149,7 +143,7 @@ def devolver_menciones():
 
 
 
-@app.route('/get_hashtags', methods=['GET'])
+@app.route('/devolverHashtags', methods=['GET'])
 def get_hashtags_by_date():
     # Cargamos el archivo XML
     tree = ET.parse('mensajes.xml')
